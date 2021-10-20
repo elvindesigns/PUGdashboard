@@ -225,7 +225,8 @@
             map.setZoom(17)
             marker = new google.maps.Marker({
                 position: new google.maps.LatLng(LocationsForMap[index][1], LocationsForMap[index][2]),
-                map: map
+                map: map,
+                icon: "https://raw.githubusercontent.com/elvindesigns/PUGdashboard/master/images/marker.png"
             });
             infowindow.setContent("<p class='titleBold'>"+LocationsForMap[index][0]+"</p>"+
                                   "<p class='meterno'>Meter No.: "+LocationsForMap[index][3] +" </p>"+
