@@ -150,10 +150,10 @@
 .featureBody .usersHolder{
     margin-top: 20px;
     width: 400px;
-    height: 600px;
+    height: calc(100vh - 100px);
     background:linear-gradient(to bottom,#10139c,#080848 10%,#080848);
     border-radius: 10px;
-    padding: 40px;
+    padding: 30px 40px 40px 40px;
 }
 .featureBody .title{
     color: white;
@@ -163,20 +163,38 @@
     margin-top: 20px;
     margin-left: 20px;
     width: 1000px;
-    height: 600px;
+    height: calc(100vh - 100px);
     background:linear-gradient(to bottom,#10139c,#080848 10%,#080848);
     border-radius: 10px;
-    padding: 40px;
+    padding: 10px;
 }
 .featureBody .title{
     color: white;
 
+}
+
+.totalHolder{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.totalCount{
+    font-size: 30px;
+    font-weight: bold;
+}
+.totalDesc{
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.623);
 }
 .usersChartHolder{
     padding: 20px;
     width: 300px;
     height: 300px;
     margin: 0 auto;
+    position: relative;
 }
 .usersChart2Holder{
     padding: 20px;
@@ -237,6 +255,7 @@
     margin-top: 20px;
     margin-left: 20px;
     width: 100%;
+    height: calc(100vh - 100px);
     background-color: white;
     border-radius: 10px;
 }
@@ -270,9 +289,12 @@ table.customTable {
   }
   tr{
       font-size: 12px;
-      line-height: 30px;
-      cursor: pointer;
+      line-height: 25px;
+      
       transition: 0.2s ease-in;
+  }
+  tbody .tname{
+      cursor: pointer;
   }
   tbody>tr:nth-child(even) {background-color: #0628677c;}
   .active{
@@ -280,6 +302,9 @@ table.customTable {
   }
   tbody>tr:hover{
       background-color: rgba(255, 186, 0, 1);
+  }
+  tbody .action{
+      cursor: pointer;
   }
   .inactive{
       color:rgba(255, 186, 0, 1) ;
@@ -304,4 +329,87 @@ table.customTable {
   .units{
       text-align: center;
       font-size: 30px;
+  }
+  .countHolder{
+      display:flex;
+      color: white;
+      
+  }
+  #showing{
+     margin-top: 30px; 
+  }
+  .countHolder .col{
+      text-align: center;
+  }
+  .count{
+      font-size: 35px;
+      font-weight: bold;
+  }
+  .desc{
+      font-size: 10px;
+  }
+  .bar{
+      margin-top: 10px;
+      height: 2px;
+      width: 100%;
+  }
+  .activeBGColor{
+    background-color: rgba(253, 62, 113, 1);
+  }
+  .inactiveBGColor{
+    background-color: rgba(255, 186, 0, 1);
+  }
+  .cutoffBGColor{
+    background-color: rgba(255, 0, 255, 1);
+  }
+  
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(7,8,81,0.76); /* Fallback color */
+    background-color: rgba(7,8,81,0.76); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #060641;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    color: white;
+    /* border: 1px solid #888; */
+    border-radius: 10px;
+    width: 300px; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modalDesc{
+    color: orange;
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  #meterNo{
+      font-size: 25px;
+  }
+  .otherDetails{
+      font-size: 14px;
   }

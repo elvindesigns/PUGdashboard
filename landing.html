@@ -47,8 +47,30 @@
         <div class="featureBody container">  
             <div class="usersHolder">
                 <div class="title"><p>Users</p></div>
+                <div class="countHolder row">
+                    <div class="col ">
+                        <p class="count">006</p>
+                        <p class="desc">Active Users</p>
+                        <div class="bar activeBGColor"></div>
+                    </div>
+                    <div class="col">
+                        <p class="count">001</p>
+                        <p class="desc">InActive Users</p>
+                        <div class="bar inactiveBGColor"></div>
+                    </div>
+                    <div class="col">
+                        <p class="count">002</p>
+                        <p class="desc">InActive Users</p>
+                        <div class="bar cutoffBGColor"></div>
+                    </div>
+                </div>
                 <div class="usersChartHolder">
                     <canvas id="usersChart" width="200" height="200"></canvas>
+                    <div class="totalHolder">
+                        <p class="totalCount">009</p>
+                        <p class="totalDesc">total number</p>
+                        <p class="totalDesc">of users</p>
+                    </div>
                 </div>
                 <div>
                     <div class="legendSingle" onclick="newLocation(9.116693713152465, 7.3843472685799005)">
@@ -64,9 +86,7 @@
                         <p>Cut Off Users</p>
                     </div>
                 </div>
-                <div class="usersChart2Holder">
-                    <canvas id="usersActivityChart" width="200" height="100"></canvas>
-                </div>
+                
             </div>
             <div class="usersHolder2">
                 <div>
@@ -83,66 +103,85 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr onclick="newLocation(0)">
-                        <td>Mr. Ndagijimana John</td>
+                      <tr >
+                        <td onclick="newLocation(0)" class="tname">Mr. Ndagijimana John</td>
                         <td class="active">Active</td>
-                        <td>:</td>
+                        <td onclick="displayModal(0)" class="action">:</td>
                         
                       </tr>
-                      <tr  onclick="newLocation(1)">
-                        <td>Eng. Ntakirutimana Caleb</td>
+                      <tr  >
+                        <td onclick="newLocation(1)" class="tname">Eng. Ntakirutimana Caleb</td>
                         <td class="active">Active</td>
-                        <td>:</td>
+                        <td onclick="displayModal(1)" class="action">:</td>
                        
                       </tr>
-                      <tr  onclick="newLocation(2)">
-                        <td>Mrs. Kayitesi Gabriel</td>
+                      <tr  >
+                        <td onclick="newLocation(2)" class="tname">Mrs. Kayitesi Gabriel</td>
                         <td class="active">Active</td>
-                        <td>:</td>
+                        <td onclick="displayModal(2)" class="action">:</td>
       
                       </tr>
-                      <tr  onclick="newLocation(3)">
-                        <td>Mr  Iyakaremye Micheal</td>
+                      <tr  >
+                        <td onclick="newLocation(3)" class="tname">Mr  Iyakaremye Micheal</td>
                         <td class="inactive">Inactive</td>
-                        <td>:</td>
+                        <td onclick="displayModal(3)" class="action">:</td>
                
                       </tr>
-                      <tr  onclick="newLocation(4)">
-                        <td>Mrs Nana  Patrick</td>
+                      <tr  >
+                        <td onclick="newLocation(4)" class="tname">Mrs Nana  Patrick</td>
                         <td class="active">Active</td>
-                        <td>:</td>
+                        <td onclick="displayModal(4)" class="action">:</td>
                
                       </tr>
-                      <tr  onclick="newLocation(5)">
-                        <td>Mrs Anastase  John</td>
+                      <tr  >
+                        <td onclick="newLocation(5)" class="tname">Mrs Anastase  John</td>
                         <td class="cutoff">Cut-Off</td>
-                        <td>:</td>
+                        <td onclick="displayModal(5)" class="action">:</td>
                
                       </tr>
-                      <tr  onclick="newLocation(6)">
-                        <td>Barr.  Aurore  Bogarde</td>
+                      <tr  >
+                        <td onclick="newLocation(6)" class="tname">Barr.  Aurore  Bogarde</td>
                         <td class="active">Active</td>
-                        <td>:</td>
+                        <td onclick="displayModal(6)" class="action">:</td>
                
                       </tr>
-                      <tr  onclick="newLocation(7)">
-                        <td>Mrs Nkurunziza bwami</td>
+                      <tr  >
+                        <td onclick="newLocation(7)" class="tname">Mrs Nkurunziza bwami</td>
                         <td class="active">Active</td>
-                        <td>:</td>
+                        <td onclick="displayModal(7)" class="action">:</td>
                
                       </tr>
-                      <tr  onclick="newLocation(8)">
-                        <td>Mungwasingizwe  Ndagijimana</td>
+                      <tr  >
+                        <td onclick="newLocation(8)" class="tname">Mungwasingizwe  Ndagijimana</td>
                         <td class="cutoff">Cut-Off</td>
-                        <td>:</td>
+                        <td onclick="displayModal(8)" class="action">:</td>
                
                       </tr>
                     </tbody>
                   </table>
+                  <p id="showing">showing 9 of 9 users</p>
             </div>
             <div class="mapHolder" id="map">
 
             </div>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+            <span onclick="closeModal()" class="close">&times;</span>
+            <p class="modalTitle">USER DETAILS</p>
+            <p class="modalDesc">METER NO.</p>
+            <p id="meterNo"></p>
+            <p class="modalDesc">CUSTOMER NAME</p>
+            <p id="customerName" class="otherDetails"></p>
+            <p class="modalDesc">CUSTOMER ADDRESS</p>
+            <p id="customerAddress" class="otherDetails"></p>
+            <p class="modalDesc">METER TYPE</p>
+            <p  class="otherDetails">3 Phase</p>
+            </div>
+        
         </div>
 
     </div> 
@@ -157,13 +196,13 @@
                 datasets: [{
                     cutout:'70%',
                     label: '# of Votes',
-                    data: [70, 25, 5],
+                    data: [6, 1, 2],
                     backgroundColor: [
                         'rgba(253, 62, 113, 1)',
                         'rgba(255, 186, 0, 1)',
                         'rgba(255, 0, 255, 1)',
                     ],
-                    hoverOffset: 4,
+                    // hoverOffset: 4,
                     borderWidth: 0,
                     
                 }]
@@ -172,15 +211,15 @@
        
 
         var LocationsForMap = [
-        ['Mr. Ndagijimana John',-1.889734, 30.112747,45669656465,'Gasabo Main',127],
-        ['Eng. Ntakirutimana Caleb', -2.006294, 30.136184,45669656466,'Kicukiro_1A', 54],
-        ['Mrs. Kayitesi Gabriel', -1.886030, 30.107348,45669656467,'Gasabo Main',28],
-        ['Mr Iyakaremye Micheal',  -1.885969, 30.106763,45669656468,'Gasabo Main',190],
-        ['Mrs Nana  Patrick',   -1.957510, 30.083927,45669656469,'Kimihurura',221],
-        ['Mrs Anastase  John',  -1.866793,	29.980251,45669656470,'Kacyiru', 45],
-        ['Barr. Aurore  Bogarde',  -1.883060, 30.111144,45669656471,'Gasabo Main',349],
-        ['Mrs Nkurunziza bwami',   -1.884493, 30.111174,45669656472,'Gasabo Main',32],
-        ['Mungwasingizwe  Ndagijimana',   -1.884039,30.108918,45669656473,'Gasabo Main',67],
+        ['Mr. Ndagijimana John',-1.889734, 30.112747,45669656465,'Gasabo Main',127.3,'Trinity Apartments caleb Road  Gasabo'],
+        ['Eng. Ntakirutimana Caleb', -2.006294, 30.136184,45669656466,'Kicukiro_1A', 54.2,'A Class Blocks by studio Road Kicukiro'],
+        ['Mrs. Kayitesi Gabriel', -1.886030, 30.107348,45669656467,'Gasabo Main',28.1,'Eve Esatate Gasabo'],
+        ['Mr Iyakaremye Micheal',  -1.885969, 30.106763,45669656468,'Gasabo Main',0.0,'Rwandan franc Apartments Gasabo'],
+        ['Mrs Nana  Patrick',   -1.957510, 30.083927,45669656469,'Kimihurura',221.4,'Kimihurura public garden block'],
+        ['Mrs Anastase  John',  -1.866793,	29.980251,45669656470,'Kacyiru', 45.7,'Isheja Apartment Kacyiru'],
+        ['Barr. Aurore  Bogarde',  -1.883060, 30.111144,45669656471,'Gasabo Main',349.2,'Bombay Studios Gasabo'],
+        ['Mrs Nkurunziza bwami',   -1.884493, 30.111174,45669656472,'Gasabo Main',32.8,'Classy J Resturants  Gasabo'],
+        ['Mungwasingizwe  Ndagijimana',   -1.884039,30.108918,45669656473,'Gasabo Main',67.9,'Disney land Schools Gasabo'],
         // ['Washington', 47.751076,-120.740135]
         ];
 
@@ -236,6 +275,30 @@
             infowindow.open(map, marker);
         }
 
+        function displayModal(index){
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            var meterNo = document.getElementById("meterNo");
+            var customerName = document.getElementById("customerName");
+            var customerAddress = document.getElementById("customerAddress");
+            modal.style.display = "block";
+            // // When the user clicks anywhere outside of the modal, close it
+            // window.onclick = function(event) {
+            //     if (event.target == modal) {
+            //         modal.style.display = "none";
+            //     }
+            // }
+            meterNo.innerText = LocationsForMap[index][3];
+            customerName.innerText = LocationsForMap[index][0];
+            customerAddress.innerText = LocationsForMap[index][6];
+
+        }
+        function closeModal(){
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        
     </script>
 </body>
 </html>
