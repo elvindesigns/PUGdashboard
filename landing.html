@@ -211,15 +211,15 @@
        
 
         var LocationsForMap = [
-        ['Mr. Ndagijimana John',-1.889734, 30.112747,45669656465,'Gasabo Main',127.3,'Trinity Apartments caleb Road  Gasabo','FDR 1','Mont_Gb_Kg_001'],
-        ['Eng. Ntakirutimana Caleb', -2.006294, 30.136184,45669656466,'Kicukiro_1A', 54.2,'A Class Blocks by studio Road Kicukiro','FDR 1','Gikondo_Ki_Kg_001'],
-        ['Mrs. Kayitesi Gabriel', -1.886030, 30.107348,45669656467,'Gasabo Main',28.1,'Eve Esatate Gasabo','FDR 2','Nzove_Gb_Kg_001'],
-        ['Mr Iyakaremye Micheal',  -1.885969, 30.106763,45669656468,'Gasabo Main',0.0,'Rwandan franc Apartments Gasabo','FDR 2','Nzove_Gb_Kg_002'],
-        ['Mrs Nana  Patrick',   -1.957510, 30.083927,45669656469,'Kimihurura',221.4,'Kimihurura public garden block','FDR 2','Gasogi_Kh_Kg_001'],
-        ['Mrs Anastase  John',  -1.866793,	29.980251,45669656470,'Kacyiru', 45.7,'Isheja Apartment Kacyiru','FDR 2','Nyakabingo_Kh_Kg_001'],
-        ['Barr. Aurore  Bogarde',  -1.883060, 30.111144,45669656471,'Gasabo Main',349.2,'Bombay Studios Gasabo','FDR 2','Gasabo East_Gb_Kg_001'],
-        ['Mrs Nkurunziza bwami',   -1.884493, 30.111174,45669656472,'Gasabo Main',32.8,'Classy J Resturants  Gasabo','FDR 2','Gasabo_Gb_Kg_002'],
-        ['Mungwasingizwe  Ndagijimana',   -1.884039,30.108918,45669656473,'Gasabo Main',67.9,'Disney land Schools Gasabo','FDR 2','Gasabo_Gb_Kg_003'],
+        ['Mr. Ndagijimana John',-1.889734, 30.112747,45669656465,'Gasabo Main',127.3,'Trinity Apartments caleb Road  Gasabo','FDR 1','Mont_Gb_Kg_001','01'],
+        ['Eng. Ntakirutimana Caleb', -2.006294, 30.136184,45669656466,'Kicukiro_1A', 54.2,'A Class Blocks by studio Road Kicukiro','FDR 1','Gikondo_Ki_Kg_001','02'],
+        ['Mrs. Kayitesi Gabriel', -1.886030, 30.107348,45669656467,'Gasabo Main',28.1,'Eve Esatate Gasabo','FDR 2','Nzove_Gb_Kg_001','01'],
+        ['Mr Iyakaremye Micheal',  -1.885969, 30.106763,45669656468,'Gasabo Main',0.0,'Rwandan franc Apartments Gasabo','FDR 2','Nzove_Gb_Kg_002','01'],
+        ['Mrs Nana  Patrick',   -1.957510, 30.083927,45669656469,'Kimihurura',221.4,'Kimihurura public garden block','FDR 2','Gasogi_Kh_Kg_001','05'],
+        ['Mrs Anastase  John',  -1.866793,	29.980251,45669656470,'Kacyiru', 45.7,'Isheja Apartment Kacyiru','FDR 2','Nyakabingo_Kh_Kg_001','01'],
+        ['Barr. Aurore  Bogarde',  -1.883060, 30.111144,45669656471,'Gasabo Main',349.2,'Bombay Studios Gasabo','FDR 2','Gasabo East_Gb_Kg_001','02'],
+        ['Mrs Nkurunziza bwami',   -1.884493, 30.111174,45669656472,'Gasabo Main',32.8,'Classy J Resturants  Gasabo','FDR 2','Gasabo_Gb_Kg_002','01'],
+        ['Mungwasingizwe  Ndagijimana',   -1.884039,30.108918,45669656473,'Gasabo Main',67.9,'Disney land Schools Gasabo','FDR 2','Gasabo_Gb_Kg_003','01'],
         // ['Washington', 47.751076,-120.740135]
         ];
 
@@ -247,6 +247,7 @@
                                   "<p class='substation'>Substation: "+LocationsForMap[i][4] +" </p>"+
                                   "<p class='substation'>Feeder: "+LocationsForMap[i][7] +" </p>"+
                                   "<p class='substation'>DT Name: "+LocationsForMap[i][8] +" </p>"+
+                                  "<p class='poleno'>Pole No.: "+LocationsForMap[i][9] +" </p>"+
                                   "<p class='unitsTitle'>Available units</p>"+
                                   "<p class='units'> "+LocationsForMap[i][5] +"kWH </p>");
             infowindow.open(map, marker);
@@ -274,6 +275,7 @@
                                   "<p class='substation'>Substation: "+LocationsForMap[index][4] +" </p>"+
                                   "<p class='substation'>Feeder: "+LocationsForMap[index][7] +" </p>"+
                                   "<p class='substation'>DT Name: "+LocationsForMap[index][8] +" </p>"+
+                                  "<p class='poleno'>Pole No.: "+LocationsForMap[index][9] +" </p>"+
                                   "<p class='unitsTitle'>Available units</p>"+
                                   "<p class='units'> "+LocationsForMap[index][5] +"kWH </p>");
             infowindow.open(map, marker);

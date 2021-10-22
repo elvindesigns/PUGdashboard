@@ -326,6 +326,10 @@ table.customTable {
       text-align: center;
       font-weight: bold;
   }
+  .poleno{
+      text-align: center;
+      /* font-weight: bold; */
+  }
   .units{
       text-align: center;
       font-size: 30px;
